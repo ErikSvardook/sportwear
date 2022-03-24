@@ -1,0 +1,32 @@
+*{
+     background-color: lightblue;
+}
+
+
+table tr:hover{
+    background-color: red;
+    cursor: pointer; 
+    
+}
+
+
+
+
+table {
+   width: 80%;
+   
+   text-align: center;
+}
+
+
+td{
+   background: lightgreen;
+   color: blue;
+}
+th{
+     background: greenyellow;
+   color: black;
+}
+
+
+    
