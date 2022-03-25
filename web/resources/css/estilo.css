@@ -13,7 +13,7 @@ table tr:hover{
 
 
 table {
-   width: 80%;
+   width: 100%;
    
    text-align: center;
 }
@@ -22,11 +22,31 @@ table {
 td{
    background: lightgreen;
    color: blue;
+      font:  18px/1.5 Baskerville, helvetica, sans-serif;
+   
 }
 th{
      background: greenyellow;
    color: black;
+     font:bold  20px/1.5 Baskerville, helvetica, sans-serif;
 }
 
 
+
+.body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url("https://www.magicadisseny.com/wp-content/uploads/2014/08/06.jpg") no-repeat center center;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+}
+
+legend{
+    color: black;
+    font-weight: bold; 
+    font-style: italic;
+    font: bold 40px/1.5 Baskerville, helvetica, sans-serif;
+}
     

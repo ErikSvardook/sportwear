@@ -1,6 +1,8 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+Autor:Vicente Leonel Vásquez Hernádez
+  fecha creación: 20-03-2022
+  fecha actualización 24-03-2022
+  Descripción:Usuario Service impl
  */
 package service;
 
@@ -9,10 +11,7 @@ import java.util.List;
 import model.IUsuarioModel;
 import model.UsuarioModelImpl;
 
-/**
- *
- * @author labso10
- */
+
 public class UsuarioServiceImpl implements IUsuarioService {
 
     IUsuarioModel modelo = new UsuarioModelImpl();
