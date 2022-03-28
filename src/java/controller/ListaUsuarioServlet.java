@@ -1,3 +1,10 @@
+/*
+Erik Jarquín Sánchez
+Fecha de creación:07/03/2022
+Fecha de actualización:
+Descripción: Clase del producto
+ */
+
 package controller;
 
 import entity.Usuario;
@@ -26,17 +33,17 @@ public class ListaUsuarioServlet extends HttpServlet {
         out.println("<head>");
         out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/estilo.css'/>");
         out.println("</head>");
-        out.println("<body>");
-        out.println("<h1>Servlet</h1>");
+        out.println("<body class='body'>");
+        out.println(" <legend>Lista de usuarios</legend>");
         out.println("<table border='10'>");
         out.println("<tr>");
-        out.println("<th>codigo</th>");
-        out.println("<th>pwd</th>");
-        out.println("<th>nombre</th>");
-        out.println("<th>sexo</th>");
-        out.println("<th>edad</th>");
-        out.println("<th>editar</th>");
-        out.println("<th>eliminar</th>");
+        out.println("<th>Codigo</th>");
+        out.println("<th>Pwd</th>");
+        out.println("<th>Nombre</th>");
+        out.println("<th>Sexo</th>");
+        out.println("<th>Edad</th>");
+        out.println("<th>Editar</th>");
+        out.println("<th>Eliminar</th>");
        
         out.println("</tr>");
         IUsuarioService service = new UsuarioServiceImpl();
@@ -47,15 +54,16 @@ public class ListaUsuarioServlet extends HttpServlet {
             out.println("<td>" + usuario.getCodigo() + "</td>" + "<td>" + usuario.getContraseña() + "</td>" + "<td>" + usuario.getNombreUsuario() + "</td>"
                     + "<td>" + usuario.getSexo() + "</td>" + "<td>" + usuario.getEdad() + "</td>");
             out.println("<td><a href='EditarUsuarioServlet?Codigo=" + usuario.getCodigo() + "'>Editar</a></td>");
-            out.println("<td><a href='ElimanarUsuarioServlet?Codigo=" + usuario.getCodigo() + "'>Eliminar</a></td>");
+            //out.println("<td><a href='ElimanarUsuarioServlet?Codigo=" + usuario.getCodigo() + "'>Eliminar</a></td>");
+         out.println("<td><a href='ElimanarUsuarioServlet?Codigo=" + usuario.getCodigo() + "'onclick=\"return confirm('Estás seguro que deseas eliminar el registro?');\" >Eliminar</a></td>");
             out.println("</tr>");
+            
         }
+        out.println("<td><a href='crearRegistro.html'>Menú principal</a></td>");
 
         out.println("</tbody>");
         out.println("</table>");
         out.println("</body>");
         out.println("</html>");
-
     }
-
 }

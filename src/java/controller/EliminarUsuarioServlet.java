@@ -1,6 +1,8 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+Erik Jarquín Sánchez
+Fecha de creación:07/03/2022
+Fecha de actualización:
+Descripción: Clase del producto
  */
 package controller;
 
@@ -21,7 +23,7 @@ import service.UsuarioServiceImpl;
  *
  * @author labso10
  */
-public class ElimanarUsuarioServlet extends HttpServlet {
+public class EliminarUsuarioServlet extends HttpServlet {
 
 
    

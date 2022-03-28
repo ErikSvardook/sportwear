@@ -6,7 +6,7 @@
     </servlet>
     <servlet>
         <servlet-name>ElimanarUsuarioServlet</servlet-name>
-        <servlet-class>controller.ElimanarUsuarioServlet</servlet-class>
+        <servlet-class>controller.EliminarUsuarioServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>EditarUsuarioServlet</servlet-name>

@@ -1,6 +1,8 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+Erik Jarquín Sánchez
+Fecha de creación:07/03/2022
+Fecha de actualización:
+Descripción: Clase del producto
  */
 package controller;
 
@@ -29,13 +31,12 @@ public class GuardarCrearUsuarioServlet extends HttpServlet {
 
         IUsuarioService service = new UsuarioServiceImpl();
         Usuario usuario = new Usuario();
-        
-        //checar lo del codigooooooooooo
-        //usuario.setCodigo(request.getParameter("codigo"));
+        int idUsuario=Integer.parseInt(request.getParameter("edad"));
+        //usuario.setCodigo(Integer.parseInt(request.getParameter("codigo")));
         usuario.setNombreUsuario(request.getParameter("NombreUsuario"));
         usuario.setContraseña(request.getParameter("contraseña"));
         usuario.setSexo(request.getParameter("sexo"));
-        usuario.setEdad(Integer.parseInt(request.getParameter("edad")));
+        usuario.setEdad(idUsuario);
         service.crearRegisto(usuario);
         response.sendRedirect("ListaUsuarioServlet");
     }

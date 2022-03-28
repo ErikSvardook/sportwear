@@ -1,8 +1,8 @@
 /*
- Autor:Vicente Leonel Vásquez Hernádez
-  fecha creación: 11-03-2022
-  fecha actualización: 14-03-2022
-  Descripción: clase UsuarioModelImpl
+Erik Jarquín Sánchez
+Fecha de creación:07/03/2022
+Fecha de actualización:
+Descripción: Clase del producto
  */
 package model;
 

@@ -1,45 +1,42 @@
-
-
-.header{
-    background-color:rosybrown;
+body
+{
+    background-color: appworkspace;
+    color: black;
+}
+h1
+{
+   text-transform:uppercase;
+    font: bold 20px/45px Helvetica, Verdana, sans-serif;
     text-align: center;
-    color:#ffffff;
-    padding: 15px;
 }
-
-.footer{
-    background-color: #0099cc;
-    color: #ffffff;
+label 
+{
+    display: block;
+}
+h2 
+{
+    font: bold 14px Helvetica, Verdana, sans-serif;
+    background-color: aqua;
     text-align: center;
-    font-size: 12px;
-    padding: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0px auto;
+}
+div 
+{
+    background-color: aliceblue;
+    width: 300px;
+    margin: 0px auto;
+    padding: 10px;
+    border-radius: 15px;
 }
 
-.menu ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+input,
+label {
+    margin: .4rem 0;
 }
 
-.menu{
-    width: 25%;
-    padding:15px;
-    border: 1px solid red; 
-}
-
-.menu li{
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color: yellow;
-    color:#ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,12), 0, 1px, 2px rgba(0,0,024);
-    
-}
-
-.menu li:hover{
-    background-color: #0099cc;
-    cursor: pointer;
-}
 
 body{
 	margin:0;
@@ -54,7 +51,6 @@ body{
 	 animation: 10s linear 0s normal none infinite animate;
  
 }
-
  
 @-webkit-keyframes animate {
 	from {background-position:0 0;}

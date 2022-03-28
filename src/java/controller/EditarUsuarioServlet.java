@@ -1,3 +1,10 @@
+/*
+Erik Jarquín Sánchez
+Fecha de creación:07/03/2022
+Fecha de actualización:
+Descripción: Clase del producto
+ */
+
 package controller;
 
 import entity.Usuario;
@@ -22,19 +29,65 @@ public class EditarUsuarioServlet extends HttpServlet {
         IUsuarioService service = new UsuarioServiceImpl();
         Usuario usuario = new Usuario();
         usuario = service.obtenerRegistro(idUsuario);
-        
-        out.println("<form action='GuardarEditarUsuarioServlet' method='GET'>");
+        out.println("<link rel=\"stylesheet\" href=\"../resources/css/estiloCrearRegistro.css\">");
+        out.print("<body class='body'>");
+        out.println("<fieldset>");
+        out.println(" <legend>Editar Usuario</legend>");
+        out.println("<form class='color' action='GuardarEditarUsuarioServlet' method='GET'>");
         out.println("<input type='hidden' name='codigo' value='" + usuario.getCodigo() + "'/>");
-        out.println("<label>nombre</label>");
+        out.println("<label for=\"fname\">Nombre:</label><br>");
         out.println("<input type='text' name='NombreUsuario' value='" + usuario.getNombreUsuario() + "'/>");
-        out.println("<label>contraseña</label>");
+        out.println("<br><br>");
+        out.println("<label for=\"pwd\">Contraseña:</label><br>");
         out.println("<input type='text' name='contraseña' value='" + usuario.getContraseña() + "'/>");
-        out.println("<label>sexo</label>");
-        out.println("<input type='text' name='sexo' value='" + usuario.getSexo() + "'/>");
-        out.println("<label>edad</label>");
+        out.println("<br><br>");
+        out.println(" <b>Seleccione su sexo:</b>");
+        //out.println("<input type='text' name='sexo' value='" + usuario.getSexo() + "'/>");
+        out.println("<input type=\"radio\" name=\"sexo\" value=\"Hombre\">");
+        out.println("<label for=\"male\">Hombre</label>");
+        out.println("<input type=\"radio\" name=\"sexo\" value=\"Mujer\">");
+        out.println("<label for=\"male\">Mujer</label>");
+        out.println("<br><br>");
+        out.println(" <br><label for=\"fname\">Edad:</label><br>");
         out.println("<input type='text' name='edad' value='" + usuario.getEdad() + "'/>");
+        out.println("<br><br>");
         out.print("<input type='submit' value='Enviar'/>");
         out.println("</form>");
+        out.println("</fieldset>");
+         out.println("</body>");
+         
+        /*
+         
+       
+
+        <fieldset>
+            <legend>Registro de usuarios</legend>
+            <form  class="color" action='../GuardarCrearUsuarioServlet' method='POST'>
+                <input type='hidden' name='codigo' value=""/>
+                <label for="fname">Nombre:</label><br>
+                <input type='text' name='NombreUsuario' value=""><br>
+
+                <label for="pwd">Contraseña:</label><br>
+                <input type='text' name='contraseña' value=""/><br><br>
+
+
+                <b>Seleccione su sexo:</b>
+                <input type="radio" name="sexo" value="Hombre">
+                <label for="male">Hombre</label>
+                <input type="radio" name="sexo" value="Mujer">
+                <label for="female">Mujer</label><br>
+
+               
+                <br><label for="fname">Edad:</label><br>
+                <input type='text' name='edad' value="">
+                <br> <br>
+
+                <input type="submit" value="Guardar">
+            </form>
+          </fieldset>
+         
+         */ 
+        
     }
 
 }
