@@ -1,52 +1,75 @@
-*{
-     background-color: lightblue;
+body{
+  background-color: paleturquoise;
+  font-family: Arial;
+}
+
+#main-container{
+  margin: 150px auto;
+  width: 600px;
+}
+
+table{
+  background-color: white;
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td{
+  padding: 20px;
+}
+
+thead{
+  background-color: #246355;
+  border-bottom: solid 5px #0F362D;
+  color: white;
+}
+
+tr:nth-child(even){
+  background-color: #ddd;
+}
+
+tr:hover td{
+  background-color: #369681;
+  color: white;
+}
+
+h1{
+	font-size: 39px;  
+	text-align: center; 
+	padding-bottom: 20px; 
+	color: red;
+}
+
+ 
+button{
+	height: 45px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 20px; 
+	margin-top: 10px; 	
+	text-transform: uppercase;
+	background-color: #ab4493; 
+	border-color: #ab4493; 
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 420px;   
+        cursor: pointer;
+        align-content: center;
+        text-align: center;
 }
 
 
-table tr:hover{
-    background-color: red;
-    cursor: pointer; 
-    
-}
-
-
-
-
-table {
-   width: 100%;
-   
-   text-align: center;
-}
-
-
-td{
-   background: lightgreen;
-   color: blue;
-      font:  18px/1.5 Baskerville, helvetica, sans-serif;
-   
-}
-th{
-     background: greenyellow;
-   color: black;
-     font:bold  20px/1.5 Baskerville, helvetica, sans-serif;
-}
-
-
-
-.body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: url("https://www.magicadisseny.com/wp-content/uploads/2014/08/06.jpg") no-repeat center center;
-  background-size: cover;
-  font-family: 'Lato', sans-serif;
+button p{
+	color: #fff; 
 }
 
 legend{
-    color: black;
+    color: red;
     font-weight: bold; 
     font-style: italic;
     font: bold 40px/1.5 Baskerville, helvetica, sans-serif;
 }
+
+
     

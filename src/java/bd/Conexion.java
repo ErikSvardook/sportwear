@@ -23,9 +23,9 @@ public class Conexion {
 
     public Conexion() {
 
-        this.url = "jdbc:postgresql://localhost/Sportswear";
-        this.user = "postgres";
-        this.pwd = "leonel92";
+        this.url = "jdbc:postgresql://localhost/sportswear";
+        this.user = "chanate";
+        this.pwd = "157502";
     }
 
     public void conectar() throws SQLException {
