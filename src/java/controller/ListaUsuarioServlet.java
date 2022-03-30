@@ -56,6 +56,8 @@ public class ListaUsuarioServlet extends HttpServlet {
 
         out.println("</tbody>");
         out.println("</table>");
+        // out.println("<button type=\"submit\" onclick=\"history.back()\" id=\"enviar\"><p>volver atrás</p></button>");
+         out.println(" <li><a href='pages/index.html'>Regresar al inicio</a></li>");
         out.println("</body>");
         out.println("</html>");
 
