@@ -17,10 +17,7 @@ import java.io.PrintWriter;
 import java.util.List;
 import service.IUsuarioService;
 import service.UsuarioServiceImpl;
-//import javax.servlet.ServletException;
-//import javax.servlet.http.HttpServlet;
-//import javax.servlet.http.HttpServletRequest;
-//import javax.servlet.http.HttpServletResponse;
+
 
 public class ListaUsuarioServlet extends HttpServlet {
 
@@ -31,9 +28,7 @@ public class ListaUsuarioServlet extends HttpServlet {
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
-        out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/style.css'/>");
-        //out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/estilo.css'/>");
-        //out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/respons.css'/>");
+        out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/estilo.css'/>");
 
         out.println("</head>");
         out.println("<body class='body'>");

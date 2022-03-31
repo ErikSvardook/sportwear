@@ -1,5 +1,5 @@
 /*
-Autor:
+Autor:Vicente Leonel Vásquez Hernádez
   fecha creación: 17-03-2022
   fecha actualización 18-03-2022
   Descripción: formulario
@@ -15,7 +15,6 @@ form {
   border: 10px solid #CCC;
   border-radius: 1em;
 }
-
 
 ul {
   list-style: none;
@@ -71,7 +70,7 @@ textarea {
 button {
 /*   Este margen adicional representa aproximadamente el mismo espacio que el espacio
      entre las etiquetas y sus campos de texto */
-  margin-left: .7em;
+  margin-left: .5em;
 }
 
 .color{ 
@@ -82,6 +81,8 @@ button {
 .color2{
       background-color: lightcoral;
 }
+
+
 
 .body {
   width: 100vw;
@@ -115,13 +116,3 @@ color: black;
 li{
       font-weight: bold; 
 }
-
-h1{
-	font-size: 39px;  
-	text-align: letf; 
-	padding-bottom: 20px; 
-	color: #ab4493;
-        text-align: center;
-}
-
-
