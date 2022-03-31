@@ -21,7 +21,6 @@ public class EditarUsuarioServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("aquí");
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         // String idUsuario=request.getParameter("Codigo");
@@ -29,65 +28,66 @@ public class EditarUsuarioServlet extends HttpServlet {
         IUsuarioService service = new UsuarioServiceImpl();
         Usuario usuario = new Usuario();
         usuario = service.obtenerRegistro(idUsuario);
-        out.println("<link rel=\"stylesheet\" href=\"../resources/css/estiloCrearRegistro.css\">");
+        
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/estiloCrearRegistro.css'/>");
+        //out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/estilo.css'/>");
+        out.println("</head>");
+        
         out.print("<body class='body'>");
-        out.println("<fieldset>");
-        out.println(" <legend>Editar Usuario</legend>");
-        out.println("<form class='color' action='GuardarEditarUsuarioServlet' method='GET'>");
-        out.println("<input type='hidden' name='codigo' value='" + usuario.getCodigo() + "'/>");
-        out.println("<label for=\"fname\">Nombre:</label><br>");
-        out.println("<input type='text' name='NombreUsuario' value='" + usuario.getNombreUsuario() + "'/>");
-        out.println("<br><br>");
-        out.println("<label for=\"pwd\">Contraseña:</label><br>");
-        out.println("<input type='text' name='contraseña' value='" + usuario.getContraseña() + "'/>");
-        out.println("<br><br>");
-        out.println(" <b>Seleccione su sexo:</b>");
-        //out.println("<input type='text' name='sexo' value='" + usuario.getSexo() + "'/>");
-        out.println("<input type=\"radio\" name=\"sexo\" value=\"Hombre\">");
-        out.println("<label for=\"male\">Hombre</label>");
-        out.println("<input type=\"radio\" name=\"sexo\" value=\"Mujer\">");
-        out.println("<label for=\"male\">Mujer</label>");
-        out.println("<br><br>");
-        out.println(" <br><label for=\"fname\">Edad:</label><br>");
-        out.println("<input type='text' name='edad' value='" + usuario.getEdad() + "'/>");
-        out.println("<br><br>");
-        out.print("<input type='submit' value='Enviar'/>");
-        out.println("</form>");
-        out.println("</fieldset>");
-         out.println("</body>");
-         
-        /*
-         
        
-
-        <fieldset>
-            <legend>Registro de usuarios</legend>
-            <form  class="color" action='../GuardarCrearUsuarioServlet' method='POST'>
-                <input type='hidden' name='codigo' value=""/>
-                <label for="fname">Nombre:</label><br>
-                <input type='text' name='NombreUsuario' value=""><br>
-
-                <label for="pwd">Contraseña:</label><br>
-                <input type='text' name='contraseña' value=""/><br><br>
-
-
-                <b>Seleccione su sexo:</b>
-                <input type="radio" name="sexo" value="Hombre">
-                <label for="male">Hombre</label>
-                <input type="radio" name="sexo" value="Mujer">
-                <label for="female">Mujer</label><br>
-
-               
-                <br><label for="fname">Edad:</label><br>
-                <input type='text' name='edad' value="">
-                <br> <br>
-
-                <input type="submit" value="Guardar">
-            </form>
-          </fieldset>
-         
-         */ 
+        out.println("<div class='contact_form'>");
+        out.println("<div class='formulario'>");
+        
+        out.println("<h1>Registro Usuario</h1>");
+        out.println("<h3>Ingrese los datos que se te pide</h3>");
+        
+        //out.println("<form action=\"submeter-formulario.php\" method=\"post\">"); 
+        out.println("<form class='color' action='GuardarEditarUsuarioServlet' method='GET'>"); 
+        
+        out.println("<input type='hidden' name='codigo' value='" + usuario.getCodigo() + "'/>");   
+        
+        out.println("<p>\n" +
+"                        <label for=\"nombre\" class=\"colocar_nombre\">Nombre\n" +
+"                            <span class=\"obligatorio\">*</span>\n" +
+"                        </label>\n" +
+"                        <input type=\"text\" name=\"NombreUsuario\"  value='" + usuario.getNombreUsuario() + "'/\">\n" +
+"                    </p>");
+        
+        out.println("<p>\n" +
+"                        <label for=\"asunto\" class=\"colocar_asunto\">Edad\n" +
+"                            <span class=\"obligatorio\">*</span>\n" +
+"                        </label>\n" +
+"                        <input type=\"pssw\" name=\"edad\" value='" + usuario.getEdad() + "'/\">\n" +
+"                    </p>");
+        
+        out.println("<p>\n" +
+"                        <label for=\"asunto\" class=\"colocar_asunto\">Sexo\n" +
+"                            <span class=\"obligatorio\">*</span>\n" +
+"                        </label>\n" +
+"                        <input type=\"pssw\" name=\"sexo\" value='" + usuario.getSexo() + "'/\">\n" +
+"                    </p>");
+        
+        
+        out.println("<p>\n" +
+"                        <label for=\"asunto\" class=\"colocar_asunto\">Contraseña\n" +
+"                            <span class=\"obligatorio\">*</span>\n" +
+"                        </label>\n" +
+"                        <input type=\"pssw\" name=\"contraseña\" value='" + usuario.getContraseña() + "'/\">\n" +
+"                    </p>");
+        
+        out.print("<button type=\"submit\" name=\"enviar_formulario\" id=\"enviar\"><p>Enviar</p></button>");
+        out.println("<input type=\"button\" onclick=\"history.back()\" name=\"volver atrás\" value=\"volver atrás\">");
+        
+        //out.println("</form>");
+        out.println("</form>");
+        out.println("</div>");
+        out.println("</div>");
+        out.println("</body>");
+        out.println("</html>");
         
     }
-
 }
+

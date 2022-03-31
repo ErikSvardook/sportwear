@@ -1,9 +1,4 @@
-/*
- Autor:Vicente Leonel Vásquez Hernádez
-  fecha creación: 08-03-2022
-  fecha actualización: 04-03-2022
-  Descripción: clase Conexion
- */
+
 package bd;
 
 import entity.Usuario;

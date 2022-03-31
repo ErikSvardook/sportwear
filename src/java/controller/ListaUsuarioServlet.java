@@ -31,14 +31,33 @@ public class ListaUsuarioServlet extends HttpServlet {
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
-        out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/estilo.css'/>");
+        out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/style.css'/>");
+        //out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/estilo.css'/>");
+        //out.println("<link rel='stylesheet' href='"+request.getContextPath()+"/resources/css/respons.css'/>");
+
         out.println("</head>");
         out.println("<body class='body'>");
-        out.println(" <legend>Lista de usuarios</legend>");
+        
+        //out.println(" <h1>Lista de usuarios</h1>");
+        
+        out.println("<header class=\"header\">");
+        out.println("<a href=\"\" class=\"logo\">Lista de usuarios</a>");
+        out.println("<input class=\"menu-btn\" type=\"checkbox\" id=\"menu-btn\" />");
+        out.println("<label class=\"menu-icon\" for=\"menu-btn\"><span class=\"navicon\"></span></label>");
+        
+        out.println("<ul class=\"menu\">");
+        out.println("<li><a href='pages/crearRegistro.html'>Crear</a></li>");
+        out.println("<li><a href='pages/index.html'>Regresar al inicio</a></li>");
+        out.println("<li><a href='pages/Acercade.html'>Acerca de...</a></li>");
+        out.println("</ul>");
+        out.println("</header>");
+        out.println("<br><br><br><br>");
+        
+        out.println("<div class=\"table-responsive\">");
         out.println("<table border='10'>");
         out.println("<tr>");
         out.println("<th>Codigo</th>");
-        out.println("<th>Pwd</th>");
+        out.println("<th>Contraseña</th>");
         out.println("<th>Nombre</th>");
         out.println("<th>Sexo</th>");
         out.println("<th>Edad</th>");
@@ -48,6 +67,7 @@ public class ListaUsuarioServlet extends HttpServlet {
         out.println("</tr>");
         IUsuarioService service = new UsuarioServiceImpl();
         List<Usuario> listaUsuario = service.obtenerRegistros();
+        
         out.println("<tbody>");
         for (Usuario usuario : listaUsuario) {
             out.println("<tr>");
@@ -59,10 +79,11 @@ public class ListaUsuarioServlet extends HttpServlet {
             out.println("</tr>");
             
         }
-        out.println("<td><a href='crearRegistro.html'>Menú principal</a></td>");
 
         out.println("</tbody>");
         out.println("</table>");
+        out.println("</div>");
+        
         out.println("</body>");
         out.println("</html>");
     }

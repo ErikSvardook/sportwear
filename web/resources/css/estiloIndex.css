@@ -1,104 +1,9 @@
-body{
-/*  background-color: paleturquoise;
-  font-family: Arial;*/
+body {
   margin: 0;
   font-family: Helvetica, sans-serif;
-  background-color: salmon;
+  background-color: #f4f4f4;
 }
 
-#main-container{
-  margin: 150px auto;
-  width: 600px;
-}
-
-table{
-  background-color: white;
-  text-align: left;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td{
-  padding: 20px;
-}
-
-thead{
-  background-color: #246355;
-  border-bottom: solid 5px #0F362D;
-  color: white;
-}
-
-tr:nth-child(even){
-  background-color: #ddd;
-}
-
-tr:hover td{
-  background-color: #369681;
-  color: white;
-}
-
-h1{
-	font-size: 39px;  
-	text-align: center; 
-	padding-bottom: 20px; 
-	color: red;
-}
-
- 
-button{
-	height: 45px; 
-	padding-left: 5px;
-	padding-right: 5px; 	
-	margin-bottom: 20px; 
-	margin-top: 10px; 	
-	text-transform: uppercase;
-	background-color: #ab4493; 
-	border-color: #ab4493; 
-	border-style: solid; 
-	border-radius: 10px;	
-	width: 420px;   
-        cursor: pointer;
-        align-content: center;
-        text-align: center;
-}
-
-
-button p{
-	color: #fff; 
-}
-
-.table-responsive {
-    min-height: .01%;
-    overflow-x: auto;
-}
-
-@media screen and (max-width: 600px) {
-       table {
-           width:100%;
-       }
-       thead {
-           display: none;
-       }
-       tr:nth-of-type(2n) {
-           background-color: inherit;
-       }
-       tr td:first-child {
-           background: #f0f0f0;
-           font-weight:bold;
-           font-size:1.3em;
-       }
-       tbody td {
-           display: block;
-           text-align:center;
-       }
-       tbody td:before {
-           content: attr(data-th);
-           display: block;
-           text-align:center;
-       }
-}
-
-/**/
 a {
   color: #000;
 }
@@ -232,4 +137,50 @@ a {
   .header .menu-icon {
     display: none;
   }
+}
+
+
+body{
+	margin:0;
+	padding:0;
+	font-family:"arial",heletica,sans-serif;
+	font-size:12px;
+    background: #2980b9 url('https://www.publiink.com/wp-content/uploads/2016/05/fondo-formulario-fullpage.png') repeat 0 0;
+	-webkit-animation: 10s linear 0s normal none infinite animate;
+	-moz-animation: 10s linear 0s normal none infinite animate;
+	-ms-animation: 10s linear 0s normal none infinite animate;
+	-o-animation: 10s linear 0s normal none infinite animate;
+	 animation: 10s linear 0s normal none infinite animate;
+ 
+}
+ 
+@-webkit-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-moz-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-ms-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-o-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+
+
+legend{
+    font-weight: bold;
+    text-align: center;
 }
