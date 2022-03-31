@@ -42,9 +42,10 @@ a {
 .header .logo {
   display: block;
   float: left;
-  font-size: 2em;
+  font-size: 3em;
   padding: 10px 20px;
   text-decoration: none;
+  font-weight: bold; 
 }
 
 /* menu */
@@ -52,6 +53,9 @@ a {
 .header .menu {
   clear: both;
   max-height: 0;
+   font-size: 1.5em;
+   font-weight: bold; 
+   
   transition: max-height .2s ease-out;
 }
 
@@ -145,7 +149,7 @@ body{
 	padding:0;
 	font-family:"arial",heletica,sans-serif;
 	font-size:12px;
-    background: #2980b9 url('https://www.publiink.com/wp-content/uploads/2016/05/fondo-formulario-fullpage.png') repeat 0 0;
+    background: #2980b9 url('https://previews.123rf.com/images/krekdm/krekdm1610/krekdm161000142/66885529-dibujados-a-mano-sin-patr%C3%B3n-de-ropa-de-los-ni%C3%B1os-ilustraci%C3%B3n-del-vector-se-puede-utilizar-para-fondo.jpg?fj=1') repeat 0 0;
 	-webkit-animation: 10s linear 0s normal none infinite animate;
 	-moz-animation: 10s linear 0s normal none infinite animate;
 	-ms-animation: 10s linear 0s normal none infinite animate;
